@@ -1,6 +1,6 @@
 <?php
 function sql($sql){
-  //Connect MySQL Server and database. 
+  //Muodostetaan yhteys MySQL palvelimeen. 
 	$con=mysqli_connect("127.0.0.1","mysql","passwod","database") or die ('ERROR! Cannot Connect Database');
 	mysqli_query($con, "SET NAMES utf8");
 	$result = mysqli_query($con, $sql);
@@ -10,7 +10,7 @@ function sql($sql){
 }
 
 function sqlGetContent($site){
-//Selecting table
+//Valitaan tietokantataulu.
 	$result = sql("SELECT content FROM website WHERE name='" . $site . "'");
 	
 	$row = mysqli_fetch_array($result);
