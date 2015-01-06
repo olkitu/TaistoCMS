@@ -11,7 +11,7 @@ function sql($sql){
 
 function sqlGetContent($site){
 //Selecting table
-	$result = sql("SELECT content FROM table WHERE name='" . $site . "'");
+	$result = sql("SELECT content FROM website WHERE name='" . $site . "'");
 	
 	$row = mysqli_fetch_array($result);
 	return $row['content'];
