@@ -18,6 +18,8 @@ Sinun tulee sallia Apachen konfiguraatiosta .htaccess tiedosto
   /etc/apache2/sites-available/[sivusi_nimi]
 
   AllowOverride None -> AllowOverride All
+  
+Lisäohjeita: http://helenius.dy.fi/taisto/index.php/Apache2#.htaccess
 
 Asennus Nginx:
 
