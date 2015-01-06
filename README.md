@@ -5,12 +5,12 @@ Yksinkertainen ja helppokäyttöinen CMS.
 
 
 Ominaisuudet
-==========
+===
 * Yksinketaista editoida phpmyadminin avulla verkkosivuja
 * Peruselementti saa nopeasti kasaan... yksi index.php tiedostossa kaikki sivuston elementit.
 
 Vaatimukset
-==========
+===
 
 
 * PHP
