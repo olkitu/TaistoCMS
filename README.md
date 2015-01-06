@@ -25,4 +25,6 @@ Asennus Nginx:
     rewrite ^(.+)$ /index.php?q=$1 last;
   }
   
+
+Palautetta tästä ohjeesta support@datatekniikka.fi
   
