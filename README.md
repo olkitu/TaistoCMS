@@ -1,4 +1,4 @@
-Taisto-CMS-1.0
+TaistoCMS 1.0
 ==============
 
 Yksinkertainen ja helppokäyttöinen CMS.
