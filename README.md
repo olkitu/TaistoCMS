@@ -39,6 +39,9 @@ Asennus Nginx:
     rewrite ^(.+)$ /index.php?q=$1 last;
   }
   
+Lisenssi
+==============  
 
-Palautetta tästä ohjeesta support@datatekniikka.fi
-  
+Copyright 2015 datatekniikka.fi
+
+
