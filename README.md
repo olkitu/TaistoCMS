@@ -21,10 +21,6 @@ Sinun tulee sallia Apachen konfiguraatiosta .htaccess tiedosto
 
 Asennus Nginx:
 
-  if (-f $request_filename) {
-      expires 30d;
-      break;
-  }
    if (!-e $request_filename) {
     rewrite ^(.+)$ /index.php?q=$1 last;
   }
