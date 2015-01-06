@@ -3,10 +3,19 @@ TaistoCMS 1.0
 
 Yksinkertainen ja helppokäyttöinen CMS.
 
+
+Ominaisuudet
+==========
+* Yksinketaista editoida phpmyadminin avulla verkkosivuja
+* Peruselementti saa nopeasti kasaan... yksi index.php tiedostossa kaikki sivuston elementit.
+
 Vaatimukset
+==========
+
 
 * PHP
 * MySQL Server
+* phpMyAdmin
 * Web Server
 
 Esimerkki verkkosivu http://www.datatekniikka.fi
