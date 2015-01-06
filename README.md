@@ -5,18 +5,21 @@ Yksinkertainen ja helppokäyttöinen CMS.
 
 
 Ominaisuudet
-===
-* Yksinketaista editoida phpmyadminin avulla verkkosivuja
+==============
+* Yksinkertaista muokata phpmyadminin avulla verkkosivuja
 * Peruselementti saa nopeasti kasaan... yksi index.php tiedostossa kaikki sivuston elementit.
+* Laajennattavuus
 
 Vaatimukset
-===
-
+==============
 
 * PHP
 * MySQL Server
 * phpMyAdmin
 * Web Server
+
+Webbipalvelimen ohjeet
+==============
 
 Esimerkki verkkosivu http://www.datatekniikka.fi
 
