@@ -7,7 +7,8 @@ This is minimal and easy CMS.
 
 Requirements
 
-* PHP 4
-* Web Server Nginx or Apache or IIS
+* PHP
+* MySQL Server
+* Web Server
 
 Example website is http://www.datatekniikka.fi
