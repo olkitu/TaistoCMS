@@ -1,14 +1,20 @@
 Taisto-CMS-1.0
 ==============
 
-PHP MySQL CMS
+Yksinkertainen ja helppokäyttöinen CMS.
 
-This is minimal and easy CMS. 
-
-Requirements
+Vaatimukset
 
 * PHP
 * MySQL Server
 * Web Server
 
-Example website is http://www.datatekniikka.fi
+Esimerkki verkkosivu http://www.datatekniikka.fi
+
+Asennus Apacheen:
+
+Sinun tulee sallia Apachen konfiguraatiosta
+
+  /etc/apache2/sites-available/[sivusi_nimi]
+
+  AllowOverride None -> AllowOverride All
