@@ -24,3 +24,5 @@ Asennus Nginx:
    if (!-e $request_filename) {
     rewrite ^(.+)$ /index.php?q=$1 last;
   }
+  
+  
