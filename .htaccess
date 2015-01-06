@@ -1,0 +1,3 @@
+#Rewrite all request to index.php
+RewriteEngine on
+RewriteRule   ^[^/.]*$ index.php
