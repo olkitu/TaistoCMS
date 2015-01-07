@@ -60,7 +60,7 @@ function sql($sql){
 ```
 Funktio sqlGetContent tehtävänä on hakea tietokannan taulusta "website". 
 
-$site = sivusi nimi, tietokannassa name
+$site = sivusi nimi, tietokannassa "name"
 
 Funktion lopuksi palautetaan "content", eli sisältö
 ```
@@ -73,3 +73,4 @@ function sqlGetContent($site){
 }
 ?>
 ```
+
