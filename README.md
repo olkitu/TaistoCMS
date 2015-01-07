@@ -18,8 +18,8 @@ Yksinkertainen ja helppokäyttöinen sisällönhallintajärjestelmä (CMS)
 * phpMyAdmin (suositus)
 * Web Server
 
-Webbipalvelimen ohjeet
-==============
+<h2> Webbipalvelimen ohjeet </h2>
+
 
 Esimerkki verkkosivu http://www.datatekniikka.fi
 
