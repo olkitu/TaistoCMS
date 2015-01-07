@@ -35,9 +35,14 @@ Lisäohjeita: http://helenius.dy.fi/taisto/index.php/Apache2#.htaccess
 
 Asennus Nginx:
 
+Here's an example:
+
+```
    if (!-e $request_filename) {
     rewrite ^(.+)$ /index.php?q=$1 last;
   }
+```
+
   
 Lisenssi
 ==============  
