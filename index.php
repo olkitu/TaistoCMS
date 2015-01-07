@@ -2,9 +2,11 @@
 //Sisällytetään mysql.php 
 include_once ("mysql.php");
 ?>
+<!DOCTYPE html>
 <html>
 <head>
   <title> Test Page </title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 <nav>
