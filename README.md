@@ -40,7 +40,7 @@ Lisää seuraava Nginx konfiguraatioon:
     rewrite ^(.+)$ /index.php?q=$1 last;
   }
 ```
-
+http://helenius.dy.fi/taisto/index.php/Nginx
   
 Lisenssi
 ==============  
