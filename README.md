@@ -1,17 +1,17 @@
-TaistoCMS 1.0
-==============
+<h1> TaistoCMS 1.0 </h1>
+
 
 Yksinkertainen ja helppokäyttöinen sisällönhallintajärjestelmä (CMS)
 
 
-Ominaisuudet
-==============
+<h2> Ominaisuudet <H2>
+
 * Yksinkertaista muokata phpmyadminin avulla verkkosivuja
 * Peruselementti saa nopeasti kasaan... yksi index.php tiedostossa kaikki sivuston elementit.
 * Laajennattavuus
 
-Vaatimukset
-==============
+<h2> Vaatimukset </h2>
+
 
 * PHP
 * MySQL Server
