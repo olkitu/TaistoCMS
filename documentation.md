@@ -45,7 +45,7 @@ Tulostetaan tietokannasta name .footer.
 mysql.php
 ===========
 
-Funtio sql tehtävänä on yhdistää tietokanta palvelimeen localhost (127.0.0.1) tietokantaan "database" käyttäjätunnuksena "mysql" ja salasanalla "password". Määritetään yhteyden merkistökoodaukseksi utf8.
+Funtio sql tehtävänä on yhdistää tietokanta palvelimeen localhost (127.0.0.1) tietokantaan "database" käyttäjätunnuksena "mysql" ja salasanalla "password". Jos tietokantaan ei saa yhteyttä niin näytetään virheilmoitus. Määritetään yhteyden merkistökoodaukseksi utf8.
 ```
 <?php
 function sql($sql){
