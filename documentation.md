@@ -1,4 +1,4 @@
-Dokumenttaatio
+Dokumentaatio
 =========
 
 Tässä on koko sisällönhallinnan dokumenttaatio.
