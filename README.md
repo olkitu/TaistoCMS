@@ -15,7 +15,7 @@ Vaatimukset
 
 * PHP
 * MySQL Server
-* phpMyAdmin
+* phpMyAdmin (suositus)
 * Web Server
 
 Webbipalvelimen ohjeet
