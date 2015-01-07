@@ -31,18 +31,17 @@ Sinun tulee sallia Apachen konfiguraatiosta .htaccess tiedosto
   AllowOverride All
 ```
   
-Lisäohjeita: http://helenius.dy.fi/taisto/index.php/Apache2#.htaccess
-
 
 Lisää seuraava Nginx konfiguraatioon:
 ```
    if (!-e $request_filename) {
     rewrite ^(.+)$ /index.php?q=$1 last;
   }
+  
 ```
-http://helenius.dy.fi/taisto/index.php/Nginx
-
-Dokumentaatio: https://github.com/Datatekniikka/TaistoCMS/blob/master/documentation.md
+<a href="http://helenius.dy.fi/taisto/index.php/Nginx"> Nginx ohje </a>
+<a href="http://helenius.dy.fi/taisto/index.php/Apache2#.htaccess"> htaccess ohje</a>
+Tarkempi ohje <a href="https://github.com/Datatekniikka/TaistoCMS/blob/master/documentation.md"> dokumenttaatiossa </a>.
   
 Lisenssi
 ==============  
