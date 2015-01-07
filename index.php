@@ -6,7 +6,7 @@ include_once ("mysql.php");
 <html>
 <head>
   <title> Test Page </title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 <nav>
