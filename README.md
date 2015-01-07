@@ -41,6 +41,8 @@ Lisää seuraava Nginx konfiguraatioon:
   }
 ```
 http://helenius.dy.fi/taisto/index.php/Nginx
+
+Dokumentaatio: https://github.com/Datatekniikka/TaistoCMS/blob/master/documentation.md
   
 Lisenssi
 ==============  
