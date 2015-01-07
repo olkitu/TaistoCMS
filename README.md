@@ -40,7 +40,9 @@ Lisää seuraava Nginx konfiguraatioon:
   
 ```
 <a href="http://helenius.dy.fi/taisto/index.php/Nginx"> Nginx ohje </a>
+
 <a href="http://helenius.dy.fi/taisto/index.php/Apache2#.htaccess"> htaccess ohje</a>
+
 Tarkempi ohje <a href="https://github.com/Datatekniikka/TaistoCMS/blob/master/documentation.md"> dokumenttaatiossa </a>.
   
 Lisenssi
