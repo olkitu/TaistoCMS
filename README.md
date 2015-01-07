@@ -4,7 +4,7 @@
 Yksinkertainen ja helppokäyttöinen sisällönhallintajärjestelmä (CMS)
 
 
-<h2> Ominaisuudet <H2>
+<h2> Ominaisuudet </h2>
 
 * Yksinkertaista muokata phpmyadminin avulla verkkosivuja
 * Peruselementti saa nopeasti kasaan... yksi index.php tiedostossa kaikki sivuston elementit.
