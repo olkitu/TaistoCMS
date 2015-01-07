@@ -27,16 +27,14 @@ Asennus Apache2:
 
 Sinun tulee sallia Apachen konfiguraatiosta .htaccess tiedosto
 
-  /etc/apache2/sites-available/[sivusi_nimi]
-
-  AllowOverride None -> AllowOverride All
+  ```
+  AllowOverride All
+```
   
 Lisäohjeita: http://helenius.dy.fi/taisto/index.php/Apache2#.htaccess
 
-Asennus Nginx:
 
-Here's an example:
-
+Lisää seuraava Nginx konfiguraatioon:
 ```
    if (!-e $request_filename) {
     rewrite ^(.+)$ /index.php?q=$1 last;
