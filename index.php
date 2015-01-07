@@ -17,7 +17,7 @@ include_once ("mysql.php");
 <nav>
 <div>
 <?php 
-  //Pääsisältö verkkosivulla
+  //Pääsisältö verkkosivulla. Hae oletuksena /home, jos ei ole olemassa niin näytä 404 sivu tietokannasta.
 	$uri = substr($_SERVER['REQUEST_URI'], 1);
 	if($uri == "") $uri = "home";
 	$php = sqlGetContent($uri);
