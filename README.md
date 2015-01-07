@@ -1,7 +1,7 @@
 TaistoCMS 1.0
 ==============
 
-Yksinkertainen ja helppokäyttöinen CMS.
+Yksinkertainen ja helppokäyttöinen sisällönhallintajärjestelmä (CMS)
 
 
 Ominaisuudet
