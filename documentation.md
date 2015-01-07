@@ -76,7 +76,21 @@ function sqlGetContent($site){
 database.sql
 ===========
 
-Kopioi tämä mysql komentoriville.
+Sinun tulee luoda ensin tietokanta nimellä "database"
+
+```
+CREATE DATABASE database;
+```
+
+Kopioi tämä mysql komentoriville. Tämä luo automaattisesti taulukon jossa on
+
+id = Sivun numerointi järjestys
+name = sivusi nimi ja verkko-osoitteen pääte. Rajoitettu 30 merkkiin.
+content = sivusi sisältö. Ei merkistörajoituksia.
+
+Lisää "Primary Key" tauluun "id".
+
+Määrittää UTF8 merkistökoodauksen.
 ```
 --
 -- Table structure for table `website`
