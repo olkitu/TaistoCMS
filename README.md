@@ -152,6 +152,6 @@ CREATE TABLE IF NOT EXISTS `website` (
 <h2> Lisenssi </h2>
 
 
-Copyright 2015 datatekniikka.fi. Kaikki tämä materiaali on täysin muokattavissa avointa lähdekoodia. Otamme mielellämme palautetta tästä koodista ja sivusta. Parannusehdotukset kannattaa lähettää support@datatekniikka.fi tai jättää kommenttina.
+Copyright 2015 datatekniikka.fi / taisto.org. Kaikki tämä materiaali on täysin muokattavissa avointa lähdekoodia. Otamme mielellämme palautetta tästä koodista ja sivusta. Parannusehdotukset kannattaa lähettää support@datatekniikka.fi tai jättää kommenttina.
 
 
