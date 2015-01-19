@@ -135,7 +135,7 @@ content = sivusi sisältö. Ei merkistörajoituksia.
 
 Lisää "Primary Key" tauluun "id".
 
-Määrittää UTF8 merkistökoodauksen.
+Tämä määrittää UTF8 merkistökoodauksen.
 ```
 --
 -- Table structure for table `website`
