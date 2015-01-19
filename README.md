@@ -1,57 +1,54 @@
 <h1> TaistoCMS 1.0 </h1>
 
 
-Yksinkertainen ja helppokäyttöinen sisällönhallintajärjestelmä (CMS)
+A simple and easy to use content management system (CMS)
 
+<h2> Features </h2>
 
-<h2> Ominaisuudet </h2>
+* Simple to edit webpages using phpmyadmin
+* Basic elements can be assembled qucikly, all elements in one index.php file
+* Expandability
 
-* Yksinkertaista muokata phpmyadminin avulla verkkosivuja
-* Peruselementti saa nopeasti kasaan... yksi index.php tiedostossa kaikki sivuston elementit.
-* Laajennattavuus
-
-<h2> Vaatimukset </h2>
+<h2> Requirements </h2>
 
 
 * PHP
 * MySQL Server
-* phpMyAdmin (suositus)
+* phpMyAdmin (recommended)
 * Web Server
 
-<h2> Webbipalvelimen ohjeet </h2>
+<h2> Web Server instructions </h2>
 
 
-Esimerkki verkkosivu http://www.datatekniikka.fi
+Example website http://www.datatekniikka.fi
 
-Asennus Apache2:
+Modifying the configuration file of Apache2:
 
-Sinun tulee sallia Apachen konfiguraatiosta .htaccess tiedosto
-
+You must allow the .htaccess file from Apache configuration
   ```
   AllowOverride All
 ```
   
 
-Lisää seuraava Nginx konfiguraatioon:
+Add the following to your Nginx configuration:
 ```
    if (!-e $request_filename) {
     rewrite ^(.+)$ /index.php?q=$1 last;
   }
   
 ```
-<a href="http://helenius.dy.fi/taisto/Nginx"> Nginx ohje </a>
+<a href="http://taisto.org/Nginx"> Nginx instructions (in Finnish) </a>
 
-<a href="http://helenius.dy.fi/taisto/Apache2#.htaccess"> htaccess ohje</a>
+<a href="http://taisto.org/Apache2#.htaccess"> htaccess instructions (in Finnish)</a>
 
-<h2>Dokumentaatio </h2>
+<h2>Documentation </h2>
 
 
-Tässä on koko sisällönhallinnan dokumenttaatio.
-
+Here is the entire documentation of content management.
 <h3>index.php</h3>
 
 
-Upotetaan mysql.php tiedosto jossa on tietokantaan yhdistäminen scripti
+We embed the mysql.php file which cotains the script to connect to the database.
 ```
 <?php
 //Sisällytetään mysql.php 
@@ -60,19 +57,19 @@ include_once ("mysql.php");
 ```
 
 
-Tulostetaan tietokannasta .menu navigointivalikko.
+We print the .menu navigation menu from the database.
 ```
 <?php 
-  //Navigointivalikko
+  //Navigation menu
   eval('?>' . sqlGetContent(".menu"));
 ?>
 ```
-Pääsivumme tietokannassamme $uri= home.
+Our main site in the our database $uri= home.
+In the database we print the corresponding result for $uri. If $uri is "" then the database displays the home page. If $uri is null, then it shows the database's 404 page (Not Found) and it adds the header 404.
 
-Tietokannassa tulostetaan $uri vastaava tulos. Jos $uri on "" eli / niin näytetään tietokannassa home sivu. Jos on null niin tulostetaan tietokannassa oleva .404 sivu (Not Found) ja lisätään header 404. 
 ```
 <?php 
-  //Pääsisältö verkkosivulla. Hae oletuksena /home, jos ei ole olemassa niin näytä 404 sivu tietokannasta.
+  //Main content on the webpage. By default it fetches /home , if it does not exist then it displays the 404 page from the database.
 	$uri = substr($_SERVER['REQUEST_URI'], 1);
 	if($uri == "") $uri = "home";
 	$php = sqlGetContent($uri);
@@ -80,21 +77,20 @@ Tietokannassa tulostetaan $uri vastaava tulos. Jos $uri on "" eli / niin näytet
 	eval('?>' . $php);
 ?>
 ```
-Tulostetaan tietokannasta name .footer.
+Print name .footer from the database.
 ```
 <?php 
-  //Alapalkki
+  //Footer
   eval('?>' . sqlGetContent(".footer"));
 ?>
 ```
 <h3> mysql.php </h3>
 
-
-Funtio sql tehtävänä on yhdistää tietokanta palvelimeen localhost (127.0.0.1) tietokantaan "database" käyttäjätunnuksena "mysql" ja salasanalla "password". Jos tietokantaan ei saa yhteyttä niin näytetään virheilmoitus. Määritetään yhteyden merkistökoodaukseksi utf8.
+The task of the function sql is to connect the database to the server localhost (127.0.0.1). The database "database" username is "mysql" and password "password". If one can't connect to the database, then it displays an error message. We define the connection's character map to be UTF-8.
 ```
 <?php
 function sql($sql){
-  //Muodostetaan yhteys MySQL palvelimeen. 
+  //Establish connection to the MySQL server.
 	$con=mysqli_connect("127.0.0.1","mysql","password","database") or die ('ERROR! Cannot Connect Database');
 	mysqli_query($con, "SET NAMES utf8");
 	$result = mysqli_query($con, $sql);
@@ -103,14 +99,14 @@ function sql($sql){
 	return $result;
 }
 ```
-Funktio sqlGetContent tehtävänä on hakea tietokannan taulusta "website". 
+The task of function sqlGetContent is to fetch "website" from the database's table.
 
-$site = sivusi nimi, tietokannassa "name"
+$site = your page's name, in the database it is "name".
 
-Funktion lopuksi palautetaan "content", eli sisältö
+In the end of the function we return "content", which is the content.
 ```
 function sqlGetContent($site){
-//Valitaan tietokantataulu.
+// We select the database table.
 	$result = sql("SELECT content FROM website WHERE name='" . $site . "'");
 	
 	$row = mysqli_fetch_array($result);
@@ -121,21 +117,21 @@ function sqlGetContent($site){
 <h3> database.sql </h3>
 
 
-Sinun tulee luoda ensin tietokanta nimellä "database"
+You must first create a database by the name "database".
 
 ```
 CREATE DATABASE database;
 ```
 
-Kopioi tämä mysql komentoriville. Tämä luo automaattisesti taulukon jossa on
+Copy this to the mysql command line. This will automatically create a table which contains:
 
-id = Sivun numerointi järjestys
-name = sivusi nimi ja verkko-osoitteen pääte. Rajoitettu 30 merkkiin.
-content = sivusi sisältö. Ei merkistörajoituksia.
+id = the numbering order of the page
+name = the name of the page and the end of your request $uri. Limited to 30 characters.
+content = the content of your page. No character limitation.
 
-Lisää "Primary Key" tauluun "id".
+Add "Primary Key" to table "id".
 
-Tämä määrittää UTF8 merkistökoodauksen.
+This defines the UTF8 character map.
 ```
 --
 -- Table structure for table `website`
@@ -148,16 +144,19 @@ CREATE TABLE IF NOT EXISTS `website` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=21 ;
 
 INSERT INTO `website` (`id`, `name`, `content`) VALUES
-(1, '.home', '<h1> Tervettuloa sivulle! </h1>'),
-(3, '.menu', 'Valikko'),
+(1, '.home', '<h1> Welcome to the page! </h1>'),
+(3, '.menu', 'Menu'),
 (4, '.footer', '&copy; <?php echo date("Y") ?>  example.com '),
 
 ```
 
 
-<h2> Lisenssi </h2>
+<h2> License </h2>
 
 
 Copyright 2015 datatekniikka.fi / taisto.org. Kaikki tämä materiaali on täysin muokattavissa avointa lähdekoodia. Otamme mielellämme palautetta tästä koodista ja sivusta. Parannusehdotukset kannattaa lähettää support@datatekniikka.fi tai jättää kommenttina.
+
+Copyright 2015 datatekniikka.fi / taisto.org. All of the content on this page is free software published under GNU GPL.
+We are happy to receive feedback of the code and page. Enhancement recommendations should be sent to support@datatekniikka.fi or you can leave them as a comment.
 
 
