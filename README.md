@@ -153,9 +153,6 @@ INSERT INTO `website` (`id`, `name`, `content`) VALUES
 
 <h2> License </h2>
 
-
-Copyright 2015 datatekniikka.fi / taisto.org. Kaikki tämä materiaali on täysin muokattavissa avointa lähdekoodia. Otamme mielellämme palautetta tästä koodista ja sivusta. Parannusehdotukset kannattaa lähettää support@datatekniikka.fi tai jättää kommenttina.
-
 Copyright 2015 datatekniikka.fi / taisto.org. All of the content on this page is free software published under GNU GPL.
 We are happy to receive feedback of the code and page. Enhancement recommendations should be sent to support@datatekniikka.fi or you can leave them as a comment.
 
