@@ -9,6 +9,6 @@ CREATE TABLE IF NOT EXISTS `website` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=21 ;
 
 INSERT INTO `website` (`id`, `name`, `content`) VALUES
-(1, '.home', '<h1> Tervettuloa sivulle! </h1>'),
+(1, '.home', '<h1> Tervetuloa sivulle! </h1>'),
 (3, '.menu', 'Valikko'),
 (4, '.footer', '&copy; <?php echo date("Y") ?>  example.com '),
