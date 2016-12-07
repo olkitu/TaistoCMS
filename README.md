@@ -19,9 +19,6 @@ A simple and easy to use content management system (CMS)
 
 <h2> Web Server instructions </h2>
 
-
-Example website http://www.datatekniikka.fi
-
 Modifying the configuration file of Apache2:
 
 You must allow the .htaccess file from Apache configuration
