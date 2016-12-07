@@ -20,9 +20,6 @@ Yksinkertainen ja helppokäyttöinen sisällönhallintajärjestelmä (CMS)
 
 <h2> Webbipalvelimen ohjeet </h2>
 
-
-Esimerkki verkkosivu http://www.datatekniikka.fi
-
 Asennus Apache2:
 
 Sinun tulee sallia Apachen konfiguraatiosta .htaccess tiedosto
