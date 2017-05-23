@@ -150,7 +150,7 @@ INSERT INTO `website` (`id`, `name`, `content`) VALUES
 
 <h2> License </h2>
 
-Copyright 2015 datatekniikka.fi / taisto.org. All of the content on this page is free software published under GNU GPL.
-We are happy to receive feedback of the code and page. Enhancement recommendations should be sent to support@datatekniikka.fi or you can leave them as a comment.
+Copyright 2015 truong.fi / taisto.org. All of the content on this page is free software published under GNU GPL.
+We are happy to receive feedback of the code and page. 
 
 
