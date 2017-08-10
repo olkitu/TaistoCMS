@@ -1,15 +1,15 @@
-<h1> TaistoCMS 1.0 </h1>
+# TaistoCMS 1.0
 
 
 A simple and easy to use content management system (CMS)
 
-<h2> Features </h2>
+## Features
 
 * Simple to edit webpages using phpmyadmin
 * Basic elements can be assembled qucikly, all elements in one index.php file
 * Expandability
 
-<h2> Requirements </h2>
+## Requirements
 
 
 * PHP
@@ -17,36 +17,35 @@ A simple and easy to use content management system (CMS)
 * phpMyAdmin (recommended)
 * Web Server
 
-<h2> Web Server instructions </h2>
+## Web Server instructions
 
 Modifying the configuration file of Apache2:
 
 You must allow the .htaccess file from Apache configuration
-  ```
-  AllowOverride All
+```apache
+AllowOverride All
 ```
-  
+
 
 Add the following to your Nginx configuration:
+```nginx
+if (!-e $request_filename) {
+  rewrite ^(.+)$ /index.php?q=$1 last;
+}
 ```
-   if (!-e $request_filename) {
-    rewrite ^(.+)$ /index.php?q=$1 last;
-  }
-  
-```
-<a href="http://taisto.org/Nginx"> Nginx instructions (in Finnish) </a>
+[Nginx instructions (in Finnish)](http://taisto.org/Nginx)
 
-<a href="http://taisto.org/Apache2#.htaccess"> htaccess instructions (in Finnish)</a>
+[htaccess instructions (in Finnish)](http://taisto.org/Apache2#.htaccess)
 
-<h2>Documentation </h2>
+## Documentation
 
 
 Here is the entire documentation of content management.
-<h3>index.php</h3>
+### index.php
 
 
 We embed the mysql.php file which cotains the script to connect to the database.
-```
+```php
 <?php
 //Sisällytetään mysql.php 
 include_once ("mysql.php");
@@ -55,7 +54,7 @@ include_once ("mysql.php");
 
 
 We print the .menu navigation menu from the database.
-```
+```php
 <?php 
   //Navigation menu
   eval('?>' . sqlGetContent(".menu"));
@@ -64,7 +63,7 @@ We print the .menu navigation menu from the database.
 Our main site in the our database $uri= home.
 In the database we print the corresponding result for $uri. If $uri is "" then the database displays the home page. If $uri is null, then it shows the database's 404 page (Not Found) and it adds the header 404.
 
-```
+```php
 <?php 
   //Main content on the webpage. By default it fetches /home , if it does not exist then it displays the 404 page from the database.
 	$uri = substr($_SERVER['REQUEST_URI'], 1);
@@ -75,16 +74,16 @@ In the database we print the corresponding result for $uri. If $uri is "" then t
 ?>
 ```
 Print name .footer from the database.
-```
+```php
 <?php 
   //Footer
   eval('?>' . sqlGetContent(".footer"));
 ?>
 ```
-<h3> mysql.php </h3>
+### mysql.php
 
 The task of the function sql is to connect the database to the server localhost (127.0.0.1). The database "database" username is "mysql" and password "password". If one can't connect to the database, then it displays an error message. We define the connection's character map to be UTF-8.
-```
+```php
 <?php
 function sql($sql){
   //Establish connection to the MySQL server.
@@ -101,7 +100,7 @@ The task of function sqlGetContent is to fetch "website" from the database's tab
 $site = your page's name, in the database it is "name".
 
 In the end of the function we return "content", which is the content.
-```
+```php
 function sqlGetContent($site){
 // We select the database table.
 	$result = sql("SELECT content FROM website WHERE name='" . $site . "'");
@@ -111,12 +110,13 @@ function sqlGetContent($site){
 }
 ?>
 ```
-<h3> database.sql </h3>
+
+### database.sql
 
 
 You must first create a database by the name "database".
 
-```
+```sql
 CREATE DATABASE database;
 ```
 
@@ -129,7 +129,7 @@ content = the content of your page. No character limitation.
 Add "Primary Key" to table "id".
 
 This defines the UTF8 character map.
-```
+```sql
 --
 -- Table structure for table `website`
 --
@@ -148,7 +148,7 @@ INSERT INTO `website` (`id`, `name`, `content`) VALUES
 ```
 
 
-<h2> License </h2>
+## License
 
 Copyright 2015 truong.fi / taisto.org. All of the content on this page is free software published under GNU GPL.
 We are happy to receive feedback of the code and page. 
